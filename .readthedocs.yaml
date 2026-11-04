@@ -9,7 +9,7 @@ build:
 
 sphinx:
   configuration: docs/man/source/conf.py
-  # builder: "dirhtml"
+  builder: "dirhtml"
   # fail_on_warning: true
 
 formats: all

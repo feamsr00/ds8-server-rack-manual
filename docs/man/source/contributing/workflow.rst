@@ -3,6 +3,7 @@ Workflow
 
 Issues
 ------
+
 You've found a mistake in this manual, or maybe you'd like a new section. You can help us by `submitting an issue on GitHub <https://github.com/feamsr00/ds8-server-rack-manual/issues>`_. But before you create a new issue, please make sure to search the issue archive first -- your issue may have already been addressed!
 
 Please try to create bug reports that are:
@@ -16,6 +17,7 @@ Please try to create bug reports that are:
 
 On DCOs and Sign-offs
 ---------------------
+
 This project uses `Developer Certificate of Origin <https://developercertificate.org/>`_. The reasons to do so are `various and sundry <https://bssw.io/items/the-developer-certificate-of-origin>`_, and we ultimately believe they are an easy way to assure license integrity from the project and copyright compliance from developers.
 
 Compliance is simple and consists of making commit messages like so:
@@ -28,6 +30,7 @@ Compliance is simple and consists of making commit messages like so:
 
 Tests
 -----
+
 Our check is `Sphinx <https://www.sphinx-doc.org/>`_ with warnings treated as errors, which catches broken cross-references and malformed tables. Run it before you open a pull request:
 
 .. code-block:: shell
@@ -46,4 +49,5 @@ Pull Requests
 
 Release Builds
 --------------
-Builds are automatically built via CI with `Read the Docs <https://about.readthedocs.com>`_. Tag each edition with the mod version it describes, such as ``v5.12.7``, so that readers on an older version can still find their manual.
+
+Builds are automatically built via CI with `Read the Docs <https://about.readthedocs.com>`_. Tag each edition with the mod version it describes, such as ``v5.12.7``, so that readers on an older version can still find their manual. Tag a later revision for the same mod version as a post-release, such as ``v5.12.7.post1``, so that the site's stable version picks it up.

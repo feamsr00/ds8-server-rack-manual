@@ -1,5 +1,11 @@
+.. _ch-api:
+
 Using the API
 =============
+
+.. index::
+   single: Using the API
+
 To use the rack from a program, some requirements must be followed. This page is the short version: every logic value and memory address is listed in :ref:`12 Logic and memory reference <ch-reference>`, and how to program the rack is explained in :ref:`11 Programming (IC10) <ch-programming>`.
 
 DS-8 Requirements
@@ -12,6 +18,7 @@ DS-8 Requirements
 
 Getting Data
 ------------
+
 With the rack on pin d0 of a chip elsewhere:
 
 .. code-block:: text
@@ -31,10 +38,12 @@ Putting Data
 	s rack Index 100      # cursor to cell 100
 	s rack Setting 42     # write 42 there
 
-.. note::
+.. admonition:: NOTICE
+   :class: note
 
-	**NOTICE:** A single ``clr`` on the rack formats every bank that is not write-protected, all at once. Keep it out of any program that addresses the rack.
+   A single ``clr`` on the rack formats every bank that is not write-protected, all at once. Keep it out of any program that addresses the rack.
 
 Other mods
 ----------
+
 Other mods that work with the rack are listed in :ref:`13 Multiplayer, saves and mods <ch-multiplayer>`.

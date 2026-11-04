@@ -1,9 +1,10 @@
 Building the Manual
 ===================
+
 Tool requirements:
 
 - Python 3.12 or later
-- Sphinx, pinned in ``docs/man/requirements.txt``
+- Sphinx and the Furo theme, both pinned in ``docs/man/requirements.txt``
 - Make, or ``make.bat`` on Windows
 
 Misc
@@ -21,6 +22,7 @@ Get the project
 
 MAKE and Makefile
 -----------------
+
 `Make <https://www.gnu.org/software/make/>`_ is our build orchestration tool. You will use make to run any tool required for developing on this project. Build settings are configured in ``docs/man/Makefile``.
 
 Build Targets
@@ -57,4 +59,5 @@ Build Targets
 
 Reproducible builds
 ^^^^^^^^^^^^^^^^^^^
+
 If you update a pip package to add a feature or fix a bug, please be sure to commit ``docs/man/requirements.txt`` as well. This ensures that local and published builds use the same tools.
