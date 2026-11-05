@@ -16,8 +16,8 @@ D.1 Credits
    +---------------------------------------------------------------------------------------------------------------+------------------------------------------------------+
    | Stationeers, by RocketWerkz                                                                                   | The game the mod runs in                             |
    +---------------------------------------------------------------------------------------------------------------+------------------------------------------------------+
-   | In-game screenshots of a DS-8, and the mod's own                                                              | The pictures of the rack, its screens, the drive and |
-   | item icons                                                                                                    | the key                                              |
+   | In-game screenshots of a DS-8, a redrawn boot                                                                 | The pictures of the rack, its screens, the drive and |
+   | screen, and the mod's own item icons                                                                          | the key                                              |
    +---------------------------------------------------------------------------------------------------------------+------------------------------------------------------+
    | `ic10emu LogicType table <https://github.com/Ryex/ic10emu>`_                                                  | The names and numbers of the logic types             |
    +---------------------------------------------------------------------------------------------------------------+------------------------------------------------------+
@@ -38,5 +38,9 @@ D.2 Revision history
    | 2        | 11/2026 | Reorganised for browsing: new contents |
    |          |         | and page addresses, linked references, |
    |          |         | a populated index and larger pictures. |
+   |          |         | The rack's description is unchanged    |
+   +----------+---------+----------------------------------------+
+   | 3        | 11/2026 | :ref:`Figure 5-1 <figure-5-1>` redrawn |
+   |          |         | as a clean picture of the boot screen. |
    |          |         | The rack's description is unchanged    |
    +----------+---------+----------------------------------------+

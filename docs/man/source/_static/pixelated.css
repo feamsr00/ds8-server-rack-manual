@@ -1,0 +1,4 @@
+/* Keep pictures of the rack's pixel-drawn screens free of browser smoothing. */
+img.pixelated {
+	image-rendering: pixelated;
+}

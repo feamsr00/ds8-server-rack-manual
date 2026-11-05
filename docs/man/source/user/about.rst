@@ -38,6 +38,6 @@ The information reflects mod version 5.12.7 and may change with later versions. 
 License
 -------
 
-The text of this manual is provided to you under the `MIT License <https://github.com/feamsr00/ds8-server-rack-manual/blob/main/LICENSE>`_, and all usage of it is determined and defined by the terms of this license. Please refer to the file above for the full license text. Screenshots and item icons show the mod and the game, and remain the property of their owners.
+The text of this manual is provided to you under the `MIT License <https://github.com/feamsr00/ds8-server-rack-manual/blob/main/LICENSE>`_, and all usage of it is determined and defined by the terms of this license. Please refer to the file above for the full license text. Screenshots, the redrawn boot screen and item icons show the mod and the game, and remain the property of their owners.
 
 *Copyright (c) 2026 feamsr00. Any rights not expressly granted herein are reserved.*

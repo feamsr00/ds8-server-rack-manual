@@ -11,4 +11,4 @@ pip install -r docs/man/requirements.txt
 cd docs/man && make dirhtml
 ```
 
-Corrections are welcome as [issues](https://github.com/feamsr00/ds8-server-rack-manual/issues) or pull requests; see the Workflow page in the manual. The text is under the [MIT License](LICENSE). Screenshots and item icons remain the property of their owners.
+Corrections are welcome as [issues](https://github.com/feamsr00/ds8-server-rack-manual/issues) or pull requests; see the Workflow page in the manual. The text is under the [MIT License](LICENSE). Screenshots, the redrawn boot screen and item icons remain the property of their owners.

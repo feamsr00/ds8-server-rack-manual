@@ -20,7 +20,8 @@ When you switch the rack on, or when it restarts after a power loss, it shows a 
 
 .. figure:: /images/os-boot.png
    :alt: The DS-8 Server OS boot screen with a progress bar and the line Copyright (c) Stationeer Data Systems
-   :width: 100%
+   :width: 480px
+   :class: pixelated
 
    **Figure 5-1** The boot screen.
 

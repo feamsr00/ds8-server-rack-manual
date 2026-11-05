@@ -11,6 +11,8 @@ exclude_patterns = []
 
 html_theme = 'furo'
 html_title = 'DS-8 Server Rack: unofficial manual'
+html_static_path = ['_static']
+html_css_files = ['pixelated.css']
 html_theme_options = {
 	'navigation_with_keys': True,
 	'source_repository': 'https://github.com/feamsr00/ds8-server-rack-manual/',
