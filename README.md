@@ -1,6 +1,6 @@
 # DS-8 Server Rack: User and Developer Manual
 
-An unofficial manual for the [DS-8 Server Rack](https://steamcommunity.com/sharedfiles/filedetails/?id=3819662919), a third-party mod by Iwan for Stationeers by RocketWerkz. It covers mod version 5.12.7 and is not endorsed by the mod's author or by RocketWerkz.
+A community manual for the [DS-8 Server Rack](https://steamcommunity.com/sharedfiles/filedetails/?id=3819662919), a third-party mod by Iwan for Stationeers by RocketWerkz. It covers mod version 5.12.7, is maintained by Raven, and is not endorsed by RocketWerkz.
 
 Read it at <https://ds-8-server-rack-user-and-developer-manual.readthedocs.io/>, or browse the source in [`docs/man/source`](docs/man/source).
 

@@ -44,3 +44,6 @@ D.2 Revision history
    |          |         | as a clean picture of the boot screen. |
    |          |         | The rack's description is unchanged    |
    +----------+---------+----------------------------------------+
+   | 4        | 11/2026 | Now described as a community manual.   |
+   |          |         | The rack's description is unchanged    |
+   +----------+---------+----------------------------------------+

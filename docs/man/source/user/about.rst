@@ -31,7 +31,7 @@ Printing costs are not covered here.
 Legal note
 ----------
 
-This is an unofficial manual for the DS-8 Server Rack, a third-party mod by Iwan for the game Stationeers by RocketWerkz. It is not endorsed by the mod's author or by RocketWerkz. The DS-8, Stationeer Data Systems and everything else described here exist only inside the game; any resemblance to real server hardware is entirely deliberate.
+This is a community manual for the DS-8 Server Rack, a third-party mod by Iwan for the game Stationeers by RocketWerkz. It is maintained by Raven, and is not endorsed by RocketWerkz. The DS-8, Stationeer Data Systems and everything else described here exist only inside the game; any resemblance to real server hardware is entirely deliberate.
 
 The information reflects mod version 5.12.7 and may change with later versions. Where the Workshop page and the mod disagree, this manual follows the mod. No warranty, express or implied, is given for the contents of your banks.
 

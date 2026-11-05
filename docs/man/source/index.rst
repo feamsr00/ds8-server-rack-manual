@@ -1,7 +1,7 @@
 DS-8 Server Rack: User and Developer Manual
 ===========================================
 
-*Edition 11/2026, for mod version 5.12.7. Unofficial, and not endorsed by the mod's author or by RocketWerkz; see* :ref:`About this manual <about>`.
+*Edition 11/2026, for mod version 5.12.7. A community manual maintained by Raven; see* :ref:`About this manual <about>`.
 
 .. image:: /images/icons.png
    :alt: The mod's own icons: the DS-8 Server Rack, a data drive and the rack key
