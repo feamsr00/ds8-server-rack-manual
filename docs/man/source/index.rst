@@ -1,5 +1,5 @@
-DS-8 Server Rack: User and Developer Manual
-===========================================
+DS-8 Server Rack System Manual
+==============================
 
 *Edition 11/2026, for mod version 5.12.7. A community manual maintained by Raven; see* :ref:`About this manual <about>`.
 

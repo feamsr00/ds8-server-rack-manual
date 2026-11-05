@@ -47,3 +47,7 @@ D.2 Revision history
    | 4        | 11/2026 | Now described as a community manual.   |
    |          |         | The rack's description is unchanged    |
    +----------+---------+----------------------------------------+
+   | 5        | 11/2026 | Retitled DS-8 Server Rack System       |
+   |          |         | Manual. The rack's description is      |
+   |          |         | unchanged                              |
+   +----------+---------+----------------------------------------+

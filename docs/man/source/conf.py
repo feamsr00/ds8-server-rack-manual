@@ -10,7 +10,7 @@ extensions = []
 exclude_patterns = []
 
 html_theme = 'furo'
-html_title = 'DS-8 Server Rack manual'
+html_title = 'DS-8 Server Rack System Manual'
 html_static_path = ['_static']
 html_css_files = ['pixelated.css']
 html_theme_options = {
@@ -23,7 +23,7 @@ html_theme_options = {
 # PDF only. pdflatex has no glyph for the minus sign, chapters, tables and figures
 # are numbered by hand, figures should stay next to the text that introduces them, and a PDF
 # read on screen is better without blank left-hand pages.
-latex_documents = [('index', 'ds-8serverrack.tex', 'DS-8 Server Rack: User and Developer Manual', 'feamsr00', 'manual')]
+latex_documents = [('index', 'ds-8serverrack.tex', 'DS-8 Server Rack System Manual', 'feamsr00', 'manual')]
 latex_elements = {
 	'preamble': r'\DeclareUnicodeCharacter{2212}{\ensuremath{-}}\setcounter{secnumdepth}{-1}\setcounter{tocdepth}{1}\usepackage{caption}\captionsetup{labelformat=empty}',
 	'figure_align': 'H',
