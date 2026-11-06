@@ -223,8 +223,8 @@ The tables below are grouped by subject. In each, the possible causes are listed
    | A program stops with an error on       | The address is below 0 or above 4183    | Check the address arithmetic           |
    | ``get`` or ``put``                     |                                         |                                        |
    +----------------------------------------+-----------------------------------------+----------------------------------------+
-   | Several banks are suddenly empty       | A ``clr`` or a write to ``ClearMemory`` | See the notice below                   |
-   |                                        | formatted them                          |                                        |
+   | Several banks are suddenly empty       | A ``clr``, a ``clrd`` or a write to     | See the notice below                   |
+   |                                        | ``ClearMemory`` formatted them          |                                        |
    +----------------------------------------+-----------------------------------------+----------------------------------------+
    | The event log is empty after loading a | The event log is not saved              | Nothing; this is expected              |
    | save                                   |                                         |                                        |
@@ -233,7 +233,7 @@ The tables below are grouped by subject. In each, the possible causes are listed
 .. admonition:: NOTICE
    :class: note
 
-   A single ``clr`` from any program that points a pin at the rack, or a write of 1 to ``ClearMemory``, formats every bank that is not write-protected, all at once. Neither **REM** nor **MEM WR** prevents a ``clr``; only write protection does. Switch on write protection for the banks you care about.
+   A single ``clr`` from any program that points a pin at the rack, a ``clrd`` with the rack's ID, or a write of 1 to ``ClearMemory``, formats every bank that is not write-protected, all at once. Neither **REM** nor **MEM WR** prevents a ``clr`` or ``clrd``; only write protection does. Switch on write protection for the banks you care about.
 
 How banks, drives and protection fit together is explained in :ref:`6 Storage and data handling <ch-storage>`.
 

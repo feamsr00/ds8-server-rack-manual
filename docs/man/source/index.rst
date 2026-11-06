@@ -47,8 +47,8 @@ The DS-8 Server Rack is a full-height cabinet that stores data, runs up to twelv
 +-----------------------------------------------------+--------------------------------------------------------+
 | Look up a specification                             | :ref:`Appendix A: Technical data <app-a>`              |
 +-----------------------------------------------------+--------------------------------------------------------+
-| Write an IC10 program                               | :ref:`Using the API <ch-api>`,                         |
-|                                                     | :ref:`11 Programming (IC10) <ch-programming>`          |
+| Write an IC10 program                               | :ref:`11 Programming (IC10) <ch-programming>`,         |
+|                                                     | :ref:`11.5 Access from programs <sec-11-5>`            |
 +-----------------------------------------------------+--------------------------------------------------------+
 | Look up a logic value or memory address             | :ref:`12 Logic and memory reference <ch-reference>`    |
 +-----------------------------------------------------+--------------------------------------------------------+
@@ -77,7 +77,6 @@ This manual describes the rack as built by mod version 5.12.7. The User Manual, 
    :caption: Developer Manual
    :maxdepth: 1
 
-   Using the API <dev/api>
    11 Programming (IC10) <dev/programming>
    12 Logic and memory reference <dev/reference>
    13 Multiplayer, saves and mods <dev/multiplayer>

@@ -23,6 +23,8 @@ With the default 512-cell drives, the rack's memory is eight banks of 512 cells:
 
    The server setting ``DriveCapacity`` changes the size of every bank, and with it every address above bank 0, including where the status cells begin. Drives already in use keep their old size. Choose the drive size before you build the first rack, and leave it alone afterwards.
 
+.. _sec-6-2:
+
 6.2 When a bank answers
 -----------------------
 
@@ -136,7 +138,7 @@ Separately, the **MEM WR** switch decides whether the rack's own processors may 
 .. admonition:: NOTICE
    :class: note
 
-   A single ``clr`` from a program that points a pin at the rack, or a write of 1 to ``ClearMemory``, formats every bank that is not write-protected, all at once. Protect the banks you care about. See also :ref:`2 Safety <ch-safety>`.
+   A single ``clr`` from a program that points a pin at the rack, a ``clrd`` with the rack's ID, or a write of 1 to ``ClearMemory``, formats every bank that is not write-protected, all at once. Protect the banks you care about. See also :ref:`2 Safety <ch-safety>`.
 
 .. _sec-6-6:
 

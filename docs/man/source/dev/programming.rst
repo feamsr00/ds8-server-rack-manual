@@ -115,7 +115,7 @@ Several panel controls and settings change how programs run without changing a l
    +--------------------------+-------------------------+-----------------------------------------+
    | **MEM WR**               | Processor unit          | Off: the rack's own processors can no   |
    |                          |                         | longer ``put`` into its memory. It does |
-   |                          |                         | not stop ``clr``                        |
+   |                          |                         | not stop ``clr`` or ``clrd``            |
    +--------------------------+-------------------------+-----------------------------------------+
    | **DEBUG**                | Processor unit          | On: all processors wait, and **STEP**   |
    |                          |                         | advances the selected one by a line, or |
@@ -191,38 +191,38 @@ The CPU program, its debugger and its code check are described in :ref:`5.13 CPU
 .. index::
    single: Access from programs
 
-A program reaches the rack in two ways: through its memory, with ``get``, ``put`` and ``clr``, and through its logic values, with ``l`` and ``s``. The same instructions work from the rack's own processors, through ``db``, and from chips in other housings, through a pin that points at the rack. What differs is what restrains them.
+A program reaches the rack in two ways: through its memory, with ``get``, ``put`` and ``clr``, and through its logic values, with ``l`` and ``s``. The same instructions work from the rack's own processors, through ``db``, and from chips in other housings, through a pin that points at the rack. Chips elsewhere can also skip the pin and name the rack by its ID, with ``getd``, ``putd`` and ``clrd``, which are restrained in exactly the same way. What differs is what restrains them.
 
 .. _table-11-4:
 
 .. table:: **Table 11-4** What restrains access to the rack
 
-   +----------------------------------------+-----------------------------------------+----------------------------------------+
-   | Operation                              | From the rack's own processors          | From chips in other housings           |
-   +========================================+=========================================+========================================+
-   | ``get`` from a data bank               | The bank must be served                 | The bank must be served                |
-   +----------------------------------------+-----------------------------------------+----------------------------------------+
-   | ``put`` into a data bank               | **MEM WR** must be on; the bank must be | The bank must be served and not        |
-   |                                        | served and not write-protected          | write-protected                        |
-   +----------------------------------------+-----------------------------------------+----------------------------------------+
-   | ``put`` into a scratch cell            | The rack must be running, and the BIOS  | The rack must be running, and the BIOS |
-   |                                        | must allow it                           | must allow it                          |
-   +----------------------------------------+-----------------------------------------+----------------------------------------+
-   | ``clr`` on the rack                    | Only write protection stops it          | Only write protection stops it         |
-   +----------------------------------------+-----------------------------------------+----------------------------------------+
-   | ``s`` to ``Mode``, ``Lock``,           | Always allowed                          | **REM** must be on and **MAINT** off   |
-   | ``Setting``, ``Index``, ``LineNumber`` |                                         |                                        |
-   | or ``ClearMemory``                     |                                         |                                        |
-   +----------------------------------------+-----------------------------------------+----------------------------------------+
-   | ``l`` of any logic value               | Always allowed                          | Always allowed                         |
-   +----------------------------------------+-----------------------------------------+----------------------------------------+
+   +-----------------------------------------+-----------------------------------------+----------------------------------------+
+   | Operation                               | From the rack's own processors          | From chips in other housings           |
+   +=========================================+=========================================+========================================+
+   | ``get`` or ``getd`` from a data bank    | The bank must be served                 | The bank must be served                |
+   +-----------------------------------------+-----------------------------------------+----------------------------------------+
+   | ``put`` or ``putd`` into a data bank    | **MEM WR** must be on; the bank must be | The bank must be served and not        |
+   |                                         | served and not write-protected          | write-protected                        |
+   +-----------------------------------------+-----------------------------------------+----------------------------------------+
+   | ``put`` or ``putd`` into a scratch cell | The rack must be running, and the BIOS  | The rack must be running, and the BIOS |
+   |                                         | must allow it                           | must allow it                          |
+   +-----------------------------------------+-----------------------------------------+----------------------------------------+
+   | ``clr`` or ``clrd`` on the rack         | Only write protection stops it          | Only write protection stops it         |
+   +-----------------------------------------+-----------------------------------------+----------------------------------------+
+   | ``s`` to ``Mode``, ``Lock``,            | Always allowed                          | **REM** must be on and **MAINT** off   |
+   | ``Setting``, ``Index``, ``LineNumber``  |                                         |                                        |
+   | or ``ClearMemory``                      |                                         |                                        |
+   +-----------------------------------------+-----------------------------------------+----------------------------------------+
+   | ``l`` of any logic value                | Always allowed                          | Always allowed                         |
+   +-----------------------------------------+-----------------------------------------+----------------------------------------+
 
-Every refused write, and every read from a bank that nothing serves, adds one to the fault counter; a refused read returns 0. Addresses below 0 or above 4183 stop the program with an error.
+Every refused write, and every read from a bank that nothing serves, adds one to the fault counter; a refused read returns 0. Addresses below 0 or above 4183 stop the program with an error. A bank is served only while the five conditions in :ref:`6.2 <sec-6-2>` hold, so while the rack is overheated or in setup, every read from a bank returns 0 and every write to one is refused; the status cells keep answering for as long as the rack runs.
 
 .. admonition:: NOTICE
    :class: note
 
-   A ``clr`` on the rack formats every bank that is not write-protected, all at once, and neither **MEM WR** nor **REM** prevents it. Keep ``clr`` out of every program that addresses the rack, including programs in other housings with a pin on the rack, and write-protect the banks you care about.
+   A ``clr`` on the rack, or a ``clrd`` with its ID, formats every bank that is not write-protected, all at once, and neither **MEM WR** nor **REM** prevents it. Keep ``clr`` and ``clrd`` out of every program that addresses the rack, including programs in other housings, and write-protect the banks you care about.
 
 11.6 Errors and debugging
 -------------------------
@@ -304,7 +304,7 @@ Example 11-5 lets you load the same program into up to eight processors and have
 A few habits make rack programs easier to live with, and the rack easier to live with too.
 
 - Give every loop a ``yield`` or a ``sleep``. A program without one uses its whole clock every tick, which costs power and heat and achieves nothing that a ``yield`` would not.
-- Protect the banks you care about, and keep ``clr`` out of anything that addresses the rack.
+- Protect the banks you care about, and keep ``clr`` and ``clrd`` out of anything that addresses the rack.
 - Use the scratch cells for flags and handshakes between processors, and the data banks for data.
 - Assign devices to I/O ports and read their IDs from memory, rather than hard-coding IDs that change when a device is rebuilt.
 - Store finished programs on a drive, so that a lost chip is an inconvenience rather than a rewrite.

@@ -12,7 +12,7 @@ This chapter is the reference for everything a program or a logic device can see
 ---------------
 
 
-Other devices talk to the rack in two ways. Logic values are read and written with ``l`` and ``s``, or with logic readers and writers, exactly as for any other device. Memory is read and written with ``get`` and ``put``, and erased with ``clr``. The rack's own processors use both interfaces through ``db``; chips in other housings use them through a pin that points at the rack.
+Other devices talk to the rack in two ways. Logic values are read and written with ``l`` and ``s``, or with logic readers and writers, exactly as for any other device. Memory is read and written with ``get`` and ``put``, and erased with ``clr``. The rack's own processors use both interfaces through ``db``; chips in other housings use them through a pin that points at the rack, or by the rack's ID with ``ld``, ``sd``, ``getd``, ``putd`` and ``clrd``.
 
 12.2 Logic values
 -----------------
@@ -216,8 +216,8 @@ With the default 512-cell drives, addresses 0 to 4095 hold data and the 88 cells
 - Only the scratch cells can be written, and only while the rack is running and the BIOS setting **Scratch cells** is Read / write. A write to any other status cell is refused and counts as a fault.
 - A read from a bank that no drive serves returns 0 and counts as a fault. A write to it, or to a protected bank, is dropped and counts as a fault.
 - Addresses below 0 or above the last status cell stop the program with an error.
-- ``clr`` on the rack formats every bank that is not write-protected, exactly like ``ClearMemory``.
-- Chips in other housings can always ``put`` into the rack, subject to write protection. **MEM WR** restrains only the rack's own processors, and does not stop ``clr``.
+- ``clr`` on the rack, or ``clrd`` with its ID, formats every bank that is not write-protected, exactly like ``ClearMemory``.
+- Chips in other housings can always ``put`` into the rack, subject to write protection. **MEM WR** restrains only the rack's own processors, and does not stop ``clr`` or ``clrd``.
 
 12.4 Addresses with another drive size
 --------------------------------------

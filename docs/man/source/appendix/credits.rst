@@ -29,25 +29,29 @@ D.2 Revision history
 
 .. table:: **Table D-2** Revision history
 
-   +----------+---------+----------------------------------------+
-   | Revision | Edition | Changes                                |
-   +==========+=========+========================================+
-   | 1        | 11/2026 | First public edition, for mod version  |
-   |          |         | 5.12.7                                 |
-   +----------+---------+----------------------------------------+
-   | 2        | 11/2026 | Reorganised for browsing: new contents |
-   |          |         | and page addresses, linked references, |
-   |          |         | a populated index and larger pictures. |
-   |          |         | The rack's description is unchanged    |
-   +----------+---------+----------------------------------------+
-   | 3        | 11/2026 | :ref:`Figure 5-1 <figure-5-1>` redrawn |
-   |          |         | as a clean picture of the boot screen. |
-   |          |         | The rack's description is unchanged    |
-   +----------+---------+----------------------------------------+
-   | 4        | 11/2026 | Now described as a community manual.   |
-   |          |         | The rack's description is unchanged    |
-   +----------+---------+----------------------------------------+
-   | 5        | 11/2026 | Retitled DS-8 Server Rack System       |
-   |          |         | Manual. The rack's description is      |
-   |          |         | unchanged                              |
-   +----------+---------+----------------------------------------+
+   +----------+---------+-----------------------------------------+
+   | Revision | Edition | Changes                                 |
+   +==========+=========+=========================================+
+   | 1        | 11/2026 | First public edition, for mod version   |
+   |          |         | 5.12.7                                  |
+   +----------+---------+-----------------------------------------+
+   | 2        | 11/2026 | Reorganised for browsing: new contents  |
+   |          |         | and page addresses, linked references,  |
+   |          |         | a populated index and larger pictures.  |
+   |          |         | The rack's description is unchanged     |
+   +----------+---------+-----------------------------------------+
+   | 3        | 11/2026 | :ref:`Figure 5-1 <figure-5-1>` redrawn  |
+   |          |         | as a clean picture of the boot screen.  |
+   |          |         | The rack's description is unchanged     |
+   +----------+---------+-----------------------------------------+
+   | 4        | 11/2026 | Now described as a community manual.    |
+   |          |         | The rack's description is unchanged     |
+   +----------+---------+-----------------------------------------+
+   | 5        | 11/2026 | Retitled DS-8 Server Rack System        |
+   |          |         | Manual, and removed the Using the API   |
+   |          |         | page, whose content is in               |
+   |          |         | :ref:`chapter 11 <ch-programming>`.     |
+   |          |         | Chapters 2, 6, 9, 10, 11 and 12 now say |
+   |          |         | that ``clrd`` with the rack's ID        |
+   |          |         | formats the banks just like ``clr``     |
+   +----------+---------+-----------------------------------------+

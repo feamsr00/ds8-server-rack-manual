@@ -70,7 +70,7 @@ The time limit exists so that a stuck airlock does not trap anyone forever, whic
 .. admonition:: NOTICE
    :class: note
 
-   A single ``clr`` from a program that points a pin at the rack, or a write of 1 to the ``ClearMemory`` logic value, formats every bank that is not write-protected, all at once. Switch on write protection for the banks you care about, and keep ``clr`` out of any program that addresses the rack.
+   A single ``clr`` from a program that points a pin at the rack, a ``clrd`` with the rack's ID, or a write of 1 to the ``ClearMemory`` logic value, formats every bank that is not write-protected, all at once. Switch on write protection for the banks you care about, and keep ``clr`` and ``clrd`` out of any program that addresses the rack.
 
 The guarded **FORMAT** button and the Disks program's format and copy functions always ask before they act, but they still do exactly what they say: a copy overwrites every cell, program and backup on the target drive. Pulling a drive from a running rack is safe for the data, which simply leaves with the drive, but any bank that drive served answers 0 from then on. Write protection and backups are covered in :ref:`6 Storage and data handling <ch-storage>`.
 
@@ -130,7 +130,7 @@ If the rack runs anything important, such as an airlock or a room's climate, an 
 .. admonition:: NOTICE
    :class: note
 
-   While the **REM** switch is on and **MAINT** is off, any chip outside the rack can write the rack's ``Mode``, ``Lock``, ``Setting``, ``Index``, ``LineNumber`` and ``ClearMemory`` logic values. Between them, these change the screen, switch write protection off, move the cursor and write the cell under it, set the selected processor's line, and format every unprotected bank. **REM** does not guard the memory itself, however: ``put``, ``putd`` and ``clr`` from any chip that can address the rack work whatever the switch says, and only write protection stops them. Switch **REM** off unless something outside the rack genuinely needs to control it, and write-protect the banks you care about.
+   While the **REM** switch is on and **MAINT** is off, any chip outside the rack can write the rack's ``Mode``, ``Lock``, ``Setting``, ``Index``, ``LineNumber`` and ``ClearMemory`` logic values. Between them, these change the screen, switch write protection off, move the cursor and write the cell under it, set the selected processor's line, and format every unprotected bank. **REM** does not guard the memory itself, however: ``put``, ``putd``, ``clr`` and ``clrd`` from any chip that can address the rack work whatever the switch says, and only write protection stops them. Switch **REM** off unless something outside the rack genuinely needs to control it, and write-protect the banks you care about.
 
 The logic values involved are listed in :ref:`12 Logic and memory reference <ch-reference>`.
 
@@ -176,7 +176,7 @@ The rack has no access control beyond a key switch and a couple of toggles, so m
 **Universal recommendations**
 
 - Write-protect the banks you care about, and back up the automation and the patch field to a drive after every significant change.
-- Keep **REM** off unless something outside the rack needs to control it, and keep ``clr`` out of any program that points a pin at the rack.
+- Keep **REM** off unless something outside the rack needs to control it, and keep ``clr`` and ``clrd`` out of any program that addresses the rack.
 - Keep the rack in a pressurised room with a clean filter and its fans on Auto.
 - Fit a battery cell if the rack runs anything you cannot afford to lose for more than two minutes.
 - Read the event log after anything unexpected; it usually names the cause, and occasionally offers a joke for your trouble.

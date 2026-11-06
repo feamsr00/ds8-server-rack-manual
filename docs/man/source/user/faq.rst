@@ -87,7 +87,7 @@ Yes. With the rack on one of its pins, any chip can ``get`` from it and ``put`` 
 Why does this manual keep warning about ``clr``?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Because a single ``clr`` on the rack formats every bank that is not write-protected, all at once, and neither **REM** nor **MEM WR** prevents it. It is one short instruction with a very long reach, and it deserves the same respect as the guarded **FORMAT** button.
+Because a single ``clr`` on the rack, or a ``clrd`` with its ID, formats every bank that is not write-protected, all at once, and neither **REM** nor **MEM WR** prevents it. It is one short instruction with a very long reach, and it deserves the same respect as the guarded **FORMAT** button.
 
 Can each processor have its own devices on d0 to d5?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
